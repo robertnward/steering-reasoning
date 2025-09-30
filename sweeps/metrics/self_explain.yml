@@ -1,0 +1,23 @@
+project: steering-reasoning
+program: nan
+method: grid
+command:
+  - python3 
+  - -m 
+  - steering_reasoning.metrics.self_explain
+  - ${args}
+
+metric: 
+  name: train/loss
+  goal: minimize
+
+parameters:
+  config_path:
+    value: configs/metrics/self_explain.yml
+  simple_prompt: 
+    values: [false, true]
+  with_system_prompt:
+    values: [false, true]
+  only_lth_layer:
+    values: [null, 2]
+  

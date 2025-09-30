@@ -1,0 +1,2 @@
+model_path: /from_s3/steering_vectors/
+save_path: result/

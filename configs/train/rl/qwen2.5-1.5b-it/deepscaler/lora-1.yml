@@ -1,0 +1,109 @@
+seed: 0
+subsample_ds_seed: 0
+
+num_train_samples: null
+num_eval_samples: 500
+
+# Trainer
+eval_steps: -1 # will be set internally
+eval_strategy: "no"
+eval_on_start: false
+num_evals: 6
+
+num_prompts_per_step_per_device_train: 16
+num_prompts_per_step_per_device_eval: 1
+gradient_accumulation_steps: 1
+batch_size: 1
+num_generations: 16
+num_generations_in_eval: 8
+
+gradient_checkpointing: False # steering will not work with True
+use_reentrant: False
+num_train_epochs: 1
+learning_rate: 5e-4
+warmup_ratio: 0.03
+lr_scheduler_type: "constant_with_warmup"
+logging_steps: 1
+fp16: False
+bf16: True
+optim: "adamw_torch"
+save_total_limit: 5
+save_only_model: True
+dataloader_num_workers: 14
+max_grad_norm: 2
+save_strategy: "steps"
+save_steps: -1
+report_to: "wandb"
+deepspeed: configs/deepspeed/zero2-opt-offload.json
+max_steps: -1
+max_seq_length: 8192
+dataloader_drop_last: true
+ddp_find_unused_parameters: false
+
+# Output
+output_dir: "train_output/"
+
+# Wandb
+project: "steering-reasoning"
+entity: "turbo-alignment"
+group: ""
+job_type: "online"
+name: "vanilla"
+
+# models and data
+dataset_path: "agentica-org/deep_scale_r-preview-dataset"
+model_path: "/from_s3/models/Qwen2.5-1.5B-Instruct"
+
+train_on_sft: false
+neg_reward_is_zero: false
+
+# distributed setup
+policy_num_nodes: 1
+policy_num_gpus_per_node: 1
+reference_model_replicas: 1
+reward_model_replicas: 1
+reward_model_pool_num_procs: 16
+vllm_num_engines: 1
+vllm_tensor_parallel_size: 1
+
+reward_processor_type: rloo
+mean_baseline_coef: 0.1
+
+is_online_asft: false
+
+kl_is_summand_to: loss
+kl_coef: 0.0
+kl_type: shulman_token_level
+
+gamma: 1.0
+num_forwards_per_generation_train: null
+num_forwards_per_generation_eval: null
+max_num_requests_for_gen: 128
+
+# vLLM sampling params
+repetition_penalty: 1.0
+top_p: 1.0
+top_k: -1
+generation_temperature: 1.0
+stop_token: "<|im_end|>"
+
+# misc
+verbose: false
+deepspeed_timeout: 1800 # 30 * 60
+num_proc: 16
+
+kl_reduce_strategy: 'mean'
+
+batch_equalizing_max_retries: -1
+
+training_setup: lora
+steering_at_layer: null
+
+steering_rank: null
+lora_rank: 1
+lora_init: pissa
+
+lora_savepath: lora
+
+template_type: qwen_math
+append_to: false

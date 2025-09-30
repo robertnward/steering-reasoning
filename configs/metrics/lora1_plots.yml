@@ -1,0 +1,17 @@
+seed: 0
+
+model_path: /from_s3/models/Qwen2.5-Math-7B
+adapters_path: /from_s3/adapter_models/
+
+dataset_path: agentica-org/deep_scale_r-preview-dataset
+num_samples: 100
+
+max_seq_length: 4096
+generation_temperature: 1.0
+stop_token: <|im_end|>
+template_type: qwen_math
+max_samples_to_plot: 10
+
+output_dir: plots
+
+verbose: false

@@ -1,0 +1,21 @@
+seed: 0
+
+model_path: /from_s3/models/Qwen2.5-Math-7B
+steering_vectors_path: /from_s3/steering_vectors/steering_vectors.npy
+pair_accuracies_path: /from_s3/pair_accuracies/Average.npy
+dataset_path: agentica-org/deep_scale_r-preview-dataset
+
+steering_perf: 42.9
+
+num_samples: 100
+
+num_samples_to_plot: 5
+
+max_seq_length: 4096
+generation_temperature: 1.0
+stop_token: <|im_end|>
+template_type: qwen_math
+
+output_dir: plots
+
+verbose: false

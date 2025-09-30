@@ -1,0 +1,27 @@
+seed: 0
+
+dataset_path: "agentica-org/deep_scale_r-preview-dataset"
+model_path: /from_s3/models/llama3.1-8b-chat
+
+num_samples: 256
+max_seq_length: 8192
+stop_token: <|eot_id|>
+
+batch_size: 1
+num_generations: 1
+repetition_penalty: 1.0
+top_p: 1.0
+top_k: -1
+generation_temperature: 1.0
+
+template_type: qwen_math
+append_to: false
+
+prob_top_k: 5
+prob_threshold: 0.01
+
+boxplot_width: 0.5
+
+log_first_k_samples: 10
+
+savedir: result/

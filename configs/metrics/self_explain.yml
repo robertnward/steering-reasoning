@@ -1,0 +1,12 @@
+seed: 0
+model_path: /from_s3/model/
+steering_vectors_path: /from_s3/steering_vectors/steering_vectors.npy
+insert_token: X
+simple_prompt: false
+with_system_prompt: true
+only_lth_layer: 2
+
+scaling_max: 200
+scaling_step: 2
+
+savedir: results/

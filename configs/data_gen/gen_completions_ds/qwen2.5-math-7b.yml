@@ -1,0 +1,22 @@
+seed: 0
+
+model_path: /from_s3/model/
+dataset_name: agentica-org/deep_scale_r-preview-dataset
+# dataset_name: /from_s3/dataset/train-00000-of-00001.parquet
+
+batch_size: 128
+max_seq_length: 4096
+stop_token: <|im_end|>
+
+num_generations: 1
+repetition_penalty: 1.0
+top_p: 1.0
+top_k: -1
+generation_temperature: 1.0
+
+template_type: qwen_math
+
+split_id: 0
+total_splits: 1
+
+savedir: results/

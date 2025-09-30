@@ -1,0 +1,37 @@
+seed: 0
+
+model_path: /from_s3/model/
+adapter_path: null
+datasets: 
+  - Maxwell-Jia/AIME_2024
+  - opencompass/AIME2025
+  - knoveleng/AMC-23
+  - knoveleng/Minerva-Math
+  - knoveleng/OlympiadBench
+  - HuggingFaceH4/MATH-500
+
+small_datasets:
+  - Maxwell-Jia/AIME_2024
+  - opencompass/AIME2025
+  - knoveleng/AMC-23
+
+model_backend: vllm
+batch_size: 32
+gen_batch_size: 32
+max_seq_length: 32768
+stop_token: <|im_end|>
+
+num_generations: 1
+small_datasets_num_generations: 32
+repetition_penalty: 1.0
+top_p: 1.0
+top_k: -1
+generation_temperature: 1.0
+
+template_type: qwen_math
+append_to: false
+
+split_id: 0
+total_splits: 0
+
+savedir: results_splits/

@@ -1,0 +1,2 @@
+base_model: /from_s3/models/base-model
+trained_model: /from_s3/models/trained-model

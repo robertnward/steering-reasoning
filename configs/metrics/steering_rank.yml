@@ -1,0 +1,4 @@
+seed: 0
+model_path: /from_s3/models/Qwen2.5-Math-1.5B
+
+savedir: results/

@@ -1,0 +1,21 @@
+seed: 0
+
+model_path: /from_s3/models/llama3.1-8b-chat
+steering_vectors_path: /from_s3/steering_vectors/steering_vectors.npy
+pair_accuracies_path: /from_s3/pair_accuracies/Average.npy
+dataset_path: agentica-org/deep_scale_r-preview-dataset
+
+steering_perf: 25.8
+
+num_samples: 100
+
+num_samples_to_plot: 5
+
+max_seq_length: 8192
+generation_temperature: 1.0
+stop_token: <|eot_id|>
+template_type: qwen_math
+
+output_dir: plots
+
+verbose: false

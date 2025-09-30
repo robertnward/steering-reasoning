@@ -1,0 +1,4 @@
+model_path: /from_s3/models/Qwen2.5-Math-7B/
+steering_vectors_dir: /from_s3/steering_vectors/Qwen2.5-Math-7B/deepscaler/steering-layer-merged/seed-0
+
+savedir: results

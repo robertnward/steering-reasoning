@@ -1,0 +1,2 @@
+model_path: /from_s3/model/
+save_path: result/
