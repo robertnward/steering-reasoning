@@ -1,8 +1,8 @@
 <h1 align="center">Steering Reasoning</h1>
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2312.13327-<COLOR>.svg)](https://arxiv.org/abs/2505.18706)
-[![arXiv](https://img.shields.io/badge/arXiv-2312.13327-<COLOR>.svg)](https://arxiv.org/abs/2509.06608)
+[![arXiv](https://img.shields.io/badge/arXiv-2505.18706-<COLOR>.svg)](https://arxiv.org/abs/2505.18706)
+[![arXiv](https://img.shields.io/badge/arXiv-2509.06608-<COLOR>.svg)](https://arxiv.org/abs/2509.06608)
 
 ![steering_vectors_vis](assets/vis.svg)
 
